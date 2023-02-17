@@ -478,15 +478,15 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 768px) {
   .card-item:nth-child(1) .card-item-wrapper {
-    padding: 3rem 1rem;
+    padding: 3rem 0.5rem;
   }
 
   .card-item:nth-child(2) .card-item-wrapper {
-    padding: 6rem 1rem 3rem;
+    padding: 6rem 1.25rem 3rem;
   }
 
   .card-item:nth-child(3) .card-item-wrapper {
-    padding: 3rem 0;
+    padding: 3rem 0.5rem;
   }
 }
 
