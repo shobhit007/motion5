@@ -158,7 +158,13 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-inline: 2rem;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    padding: 0;
+  }
 }
 
 .navbar-logo a {
@@ -416,8 +422,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card-item {
-  min-height: 60vh;
-  max-height: 540px;
   padding: 0 1rem;
 }
 
@@ -465,7 +469,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card-item:nth-child(2) .card-item-wrapper {
-  padding: 10rem 0 3rem 3rem;
+  padding: 12rem 0 3rem 3rem;
 }
 
 .card-item:nth-child(3) .card-item-wrapper {
@@ -473,12 +477,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
+  .card-item:nth-child(1) .card-item-wrapper {
+    padding: 3rem 1rem;
+  }
+
   .card-item:nth-child(2) .card-item-wrapper {
-    padding: 6rem 2rem 3rem 2rem;
+    padding: 6rem 1rem 3rem;
   }
 
   .card-item:nth-child(3) .card-item-wrapper {
-    padding: 3rem 2rem;
+    padding: 3rem 0;
   }
 }
 
@@ -561,6 +569,10 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 768px) {
   .col-12 {
     padding: 0 0 1rem;
+  }
+
+  .feature-grid-2 {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -806,26 +818,6 @@ body::-webkit-scrollbar-thumb {
   text-align: right;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  .links-label {
-    margin-bottom: 0;
-  }
-
-  .text-right {
-    text-align: left;
-  }
-
-  .useful-links {
-    margin-bottom: 1rem;
-  }
-}
-
 .footer-links {
   list-style: none;
   padding: 0;
@@ -852,4 +844,32 @@ body::-webkit-scrollbar-thumb {
   top: 50%;
   transform: translateY(-50%);
   right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .links-label {
+    margin-bottom: 0;
+  }
+
+  .text-right {
+    text-align: left;
+  }
+
+  .useful-links {
+    margin-bottom: 1rem;
+  }
+
+  .footer-links li:not(:last-child)::after {
+    display: none;
+  }
 }
